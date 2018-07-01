@@ -1,0 +1,9 @@
+*.pdb
+*.exe
+*.dll
+Win32
+Win64
+bin
+obj
+.vs
+*.user
