@@ -42,8 +42,17 @@
             this.tbShards = new System.Windows.Forms.TextBox();
             this.tbReplicas = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.gbAddMessages = new System.Windows.Forms.GroupBox();
+            this.btnAddWithID = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnAddWithNoID = new System.Windows.Forms.Button();
+            this.gbBulk = new System.Windows.Forms.GroupBox();
+            this.btnSingleIndex = new System.Windows.Forms.Button();
+            this.btnMultiIndex = new System.Windows.Forms.Button();
             this.gbIndexExists.SuspendLayout();
             this.gbCreateIndex.SuspendLayout();
+            this.gbAddMessages.SuspendLayout();
+            this.gbBulk.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbOutput
@@ -177,11 +186,86 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Replicas";
             // 
+            // gbAddMessages
+            // 
+            this.gbAddMessages.Controls.Add(this.btnAddWithNoID);
+            this.gbAddMessages.Controls.Add(this.btnUpdate);
+            this.gbAddMessages.Controls.Add(this.btnAddWithID);
+            this.gbAddMessages.Location = new System.Drawing.Point(109, 130);
+            this.gbAddMessages.Name = "gbAddMessages";
+            this.gbAddMessages.Size = new System.Drawing.Size(274, 154);
+            this.gbAddMessages.TabIndex = 4;
+            this.gbAddMessages.TabStop = false;
+            this.gbAddMessages.Text = "Add Syslog Messages";
+            // 
+            // btnAddWithID
+            // 
+            this.btnAddWithID.Location = new System.Drawing.Point(9, 34);
+            this.btnAddWithID.Name = "btnAddWithID";
+            this.btnAddWithID.Size = new System.Drawing.Size(94, 23);
+            this.btnAddWithID.TabIndex = 0;
+            this.btnAddWithID.Text = "Add With ID";
+            this.btnAddWithID.UseVisualStyleBackColor = true;
+            this.btnAddWithID.Click += new System.EventHandler(this.btnAddWithID_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(9, 78);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(94, 23);
+            this.btnUpdate.TabIndex = 1;
+            this.btnUpdate.Text = "Update With ID";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnAddWithNoID
+            // 
+            this.btnAddWithNoID.Location = new System.Drawing.Point(145, 34);
+            this.btnAddWithNoID.Name = "btnAddWithNoID";
+            this.btnAddWithNoID.Size = new System.Drawing.Size(94, 23);
+            this.btnAddWithNoID.TabIndex = 2;
+            this.btnAddWithNoID.Text = "Add With No ID";
+            this.btnAddWithNoID.UseVisualStyleBackColor = true;
+            this.btnAddWithNoID.Click += new System.EventHandler(this.btnAddWithNoID_Click);
+            // 
+            // gbBulk
+            // 
+            this.gbBulk.Controls.Add(this.btnMultiIndex);
+            this.gbBulk.Controls.Add(this.btnSingleIndex);
+            this.gbBulk.Location = new System.Drawing.Point(400, 130);
+            this.gbBulk.Name = "gbBulk";
+            this.gbBulk.Size = new System.Drawing.Size(462, 154);
+            this.gbBulk.TabIndex = 5;
+            this.gbBulk.TabStop = false;
+            this.gbBulk.Text = "Bulk API";
+            // 
+            // btnSingleIndex
+            // 
+            this.btnSingleIndex.Location = new System.Drawing.Point(9, 34);
+            this.btnSingleIndex.Name = "btnSingleIndex";
+            this.btnSingleIndex.Size = new System.Drawing.Size(91, 23);
+            this.btnSingleIndex.TabIndex = 0;
+            this.btnSingleIndex.Text = "Single Index";
+            this.btnSingleIndex.UseVisualStyleBackColor = true;
+            this.btnSingleIndex.Click += new System.EventHandler(this.btnSingleIndex_Click);
+            // 
+            // btnMultiIndex
+            // 
+            this.btnMultiIndex.Location = new System.Drawing.Point(122, 34);
+            this.btnMultiIndex.Name = "btnMultiIndex";
+            this.btnMultiIndex.Size = new System.Drawing.Size(95, 23);
+            this.btnMultiIndex.TabIndex = 1;
+            this.btnMultiIndex.Text = "Multiple Index";
+            this.btnMultiIndex.UseVisualStyleBackColor = true;
+            this.btnMultiIndex.Click += new System.EventHandler(this.btnMultiIndex_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(972, 542);
+            this.Controls.Add(this.gbBulk);
+            this.Controls.Add(this.gbAddMessages);
             this.Controls.Add(this.gbCreateIndex);
             this.Controls.Add(this.gbIndexExists);
             this.Controls.Add(this.btnGet);
@@ -194,6 +278,8 @@
             this.gbIndexExists.PerformLayout();
             this.gbCreateIndex.ResumeLayout(false);
             this.gbCreateIndex.PerformLayout();
+            this.gbAddMessages.ResumeLayout(false);
+            this.gbBulk.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,6 +301,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbReplicas;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox gbAddMessages;
+        private System.Windows.Forms.Button btnAddWithID;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnAddWithNoID;
+        private System.Windows.Forms.GroupBox gbBulk;
+        private System.Windows.Forms.Button btnSingleIndex;
+        private System.Windows.Forms.Button btnMultiIndex;
     }
 }
 

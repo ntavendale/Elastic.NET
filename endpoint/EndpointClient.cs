@@ -70,6 +70,18 @@ namespace endpoint
                 }
             }
         }
+
+        public async Task<HttpStatusCode> PostAsync(string putData)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                var stringContent = new StringContent(putData);
+                using (HttpResponseMessage response = await client.PostAsync(this.FullURL, stringContent).ConfigureAwait(continueOnCapturedContext: false))
+                {
+                    return response.StatusCode;
+                }
+            }
+        }
     }
 
 }
