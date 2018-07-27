@@ -1,7 +1,7 @@
 # Elastic.NET
-Sample Delphi Application For ES 6
+Sample C#/.NET Application For ES example code.
 
-Createdt with VS 2017 but the code should port trvially to previous 
+Created with VS 2017 but the code should port trvially to previous 
 versions of Visual Studio and earlier .NET frameworks.
 
 Elastic Explorer Can be found here: http://www.allthingssyslog.com/ElasticExplorer
