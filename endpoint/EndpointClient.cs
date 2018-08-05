@@ -1,4 +1,12 @@
-﻿using System;
+﻿/********************************************************}
+{                                                       }
+{      Copyright(c) 2003-2018 Oamaru Group, Inc.       }
+{                                                       }
+{   Copyright and license exceptions noted in source    }
+{                                                       }
+{             Non Commerical Use Permitted              }
+{*******************************************************/
+using System;
 using System.Text;
 using System.Net;
 using System.Net.Http;
