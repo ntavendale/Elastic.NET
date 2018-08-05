@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Text;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
 namespace endpoint
@@ -63,7 +65,8 @@ namespace endpoint
         {
             using (HttpClient client = new HttpClient())
             {
-                var stringContent = new StringContent(putData);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));//ACCEPT header
+                var stringContent = new StringContent(putData, Encoding.UTF8, "application/json");
                 using (HttpResponseMessage response = await client.PutAsync(this.FullURL, stringContent).ConfigureAwait(continueOnCapturedContext: false))
                 {
                     return response.StatusCode;
@@ -75,7 +78,8 @@ namespace endpoint
         {
             using (HttpClient client = new HttpClient())
             {
-                var stringContent = new StringContent(putData);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));//ACCEPT header
+                var stringContent = new StringContent(putData, Encoding.UTF8, "application/json");
                 using (HttpResponseMessage response = await client.PostAsync(this.FullURL, stringContent).ConfigureAwait(continueOnCapturedContext: false))
                 {
                     return response.StatusCode;
