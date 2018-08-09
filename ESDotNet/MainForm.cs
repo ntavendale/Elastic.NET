@@ -144,9 +144,9 @@ namespace ESDotNet
         {
             var json = new StringBuilder();
             json.Append("{\"index\":{\"_index\" : \"2017-06-15\", \"_type\" : \"message\"}}" + Environment.NewLine);
-            json.Append("{ \"type\":\"BSD\",\"facility\":\"MailSystem\",\"severity\":\"Critical\",\"timeStamp\":\"2017-06-15T06:00:00.000Z\",\"host\":\"192.168.8.1\",\"process\":\"SysLogSimSvc\",\"processId\":2559,\"text\":\"EVID:0018 Reconnaissance activity detected 111.148.118.9:40083 -> 161.200.1.9:443 TCP\"}" + Environment.NewLine);
+            json.Append("{ \"type\":\"BSD\",\"facility\":\"MailSystem\",\"severity\":\"Critical\",\"timeStamp\":\"2017-06-15T06:00:00.000Z\",\"host\":\"192.168.8.1\",\"process\":\"SysLogSimSvc\",\"processId\":2559,\"text\":\"EVID:0018 Oh what a lovely day!\"}" + Environment.NewLine);
             json.Append("{\"index\":{\"_index\" : \"2017-06-15\", \"_type\" : \"message\"}}" + Environment.NewLine);
-            json.Append("{ \"type\":\"BSD\",\"facility\":\"SysLogInternal\",\"severity\":\"Error\",\"timeStamp\":\"2017-06-15T06:05:00.000Z\",\"host\":\"192.168.8.1\",\"process\":\"SysLogSimSvc\",\"processId\":2559,\"text\":\"EVID:0043 Host: 111.148.118.94 has a vulnerability on port: 80 protocol: http\"}" + Environment.NewLine);
+            json.Append("{ \"type\":\"BSD\",\"facility\":\"SysLogInternal\",\"severity\":\"Error\",\"timeStamp\":\"2017-06-15T06:05:00.000Z\",\"host\":\"192.168.8.1\",\"process\":\"SysLogSimSvc\",\"processId\":2559,\"text\":\"EVID:0043 Oh what a lovely car!\"}" + Environment.NewLine);
             json.Append("{\"index\":{\"_index\" : \"2017-06-15\", \"_type\" : \"message\"}}" + Environment.NewLine);
             json.Append("{ \"type\":\"BSD\",\"facility\":\"SysLogInternal\",\"severity\":\"Critical\",\"timeStamp\":\"2017-06-16T06:10:00.000Z\",\"host\":\"192.168.8.1\",\"process\":\"SysLogSimSvc\",\"processId\":2559,\"text\":\"EVID:0042 111.148.118.9 accessed url: http:\\/\\/Website001.com at UserPC5\"}" + Environment.NewLine);
             json.Append("{\"index\":{\"_index\" : \"2017-06-16\", \"_type\" : \"message\"}}" + Environment.NewLine);
