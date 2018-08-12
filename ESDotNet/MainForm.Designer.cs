@@ -31,24 +31,25 @@
             this.tbOutput = new System.Windows.Forms.TextBox();
             this.btnGet = new System.Windows.Forms.Button();
             this.gbIndexExists = new System.Windows.Forms.GroupBox();
-            this.tbIndexExists = new System.Windows.Forms.TextBox();
-            this.btnIndexExists = new System.Windows.Forms.Button();
-            this.gbCreateIndex = new System.Windows.Forms.GroupBox();
-            this.tbCreateIndex = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnCreate = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbShards = new System.Windows.Forms.TextBox();
+            this.btnIndexExists = new System.Windows.Forms.Button();
+            this.tbIndexExists = new System.Windows.Forms.TextBox();
+            this.gbCreateIndex = new System.Windows.Forms.GroupBox();
             this.tbReplicas = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.tbShards = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnCreate = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbCreateIndex = new System.Windows.Forms.TextBox();
             this.gbAddMessages = new System.Windows.Forms.GroupBox();
-            this.btnAddWithID = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAddWithNoID = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnAddWithID = new System.Windows.Forms.Button();
             this.gbBulk = new System.Windows.Forms.GroupBox();
-            this.btnSingleIndex = new System.Windows.Forms.Button();
             this.btnMultiIndex = new System.Windows.Forms.Button();
+            this.btnSingleIndex = new System.Windows.Forms.Button();
+            this.brnDelete = new System.Windows.Forms.Button();
             this.gbIndexExists.SuspendLayout();
             this.gbCreateIndex.SuspendLayout();
             this.gbAddMessages.SuspendLayout();
@@ -86,12 +87,14 @@
             this.gbIndexExists.TabStop = false;
             this.gbIndexExists.Text = "Index Exists";
             // 
-            // tbIndexExists
+            // label1
             // 
-            this.tbIndexExists.Location = new System.Drawing.Point(6, 36);
-            this.tbIndexExists.Name = "tbIndexExists";
-            this.tbIndexExists.Size = new System.Drawing.Size(252, 20);
-            this.tbIndexExists.TabIndex = 0;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Index Name";
             // 
             // btnIndexExists
             // 
@@ -102,6 +105,13 @@
             this.btnIndexExists.Text = "Check";
             this.btnIndexExists.UseVisualStyleBackColor = true;
             this.btnIndexExists.Click += new System.EventHandler(this.btnIndexExists_Click);
+            // 
+            // tbIndexExists
+            // 
+            this.tbIndexExists.Location = new System.Drawing.Point(6, 36);
+            this.tbIndexExists.Name = "tbIndexExists";
+            this.tbIndexExists.Size = new System.Drawing.Size(252, 20);
+            this.tbIndexExists.TabIndex = 0;
             // 
             // gbCreateIndex
             // 
@@ -119,57 +129,6 @@
             this.gbCreateIndex.TabStop = false;
             this.gbCreateIndex.Text = "Create Index";
             // 
-            // tbCreateIndex
-            // 
-            this.tbCreateIndex.Location = new System.Drawing.Point(6, 37);
-            this.tbCreateIndex.Name = "tbCreateIndex";
-            this.tbCreateIndex.Size = new System.Drawing.Size(281, 20);
-            this.tbCreateIndex.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Index Name";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Index Name";
-            // 
-            // btnCreate
-            // 
-            this.btnCreate.Location = new System.Drawing.Point(9, 63);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(75, 23);
-            this.btnCreate.TabIndex = 4;
-            this.btnCreate.Text = "Create";
-            this.btnCreate.UseVisualStyleBackColor = true;
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(295, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Shards";
-            // 
-            // tbShards
-            // 
-            this.tbShards.Location = new System.Drawing.Point(298, 36);
-            this.tbShards.Name = "tbShards";
-            this.tbShards.Size = new System.Drawing.Size(57, 20);
-            this.tbShards.TabIndex = 6;
-            // 
             // tbReplicas
             // 
             this.tbReplicas.Location = new System.Drawing.Point(378, 36);
@@ -186,8 +145,51 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Replicas";
             // 
+            // tbShards
+            // 
+            this.tbShards.Location = new System.Drawing.Point(298, 36);
+            this.tbShards.Name = "tbShards";
+            this.tbShards.Size = new System.Drawing.Size(57, 20);
+            this.tbShards.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(295, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Shards";
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.Location = new System.Drawing.Point(9, 63);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(75, 23);
+            this.btnCreate.TabIndex = 4;
+            this.btnCreate.Text = "Create";
+            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Index Name";
+            // 
+            // tbCreateIndex
+            // 
+            this.tbCreateIndex.Location = new System.Drawing.Point(6, 37);
+            this.tbCreateIndex.Name = "tbCreateIndex";
+            this.tbCreateIndex.Size = new System.Drawing.Size(281, 20);
+            this.tbCreateIndex.TabIndex = 0;
+            // 
             // gbAddMessages
             // 
+            this.gbAddMessages.Controls.Add(this.brnDelete);
             this.gbAddMessages.Controls.Add(this.btnAddWithNoID);
             this.gbAddMessages.Controls.Add(this.btnUpdate);
             this.gbAddMessages.Controls.Add(this.btnAddWithID);
@@ -198,15 +200,15 @@
             this.gbAddMessages.TabStop = false;
             this.gbAddMessages.Text = "Add Syslog Messages";
             // 
-            // btnAddWithID
+            // btnAddWithNoID
             // 
-            this.btnAddWithID.Location = new System.Drawing.Point(9, 34);
-            this.btnAddWithID.Name = "btnAddWithID";
-            this.btnAddWithID.Size = new System.Drawing.Size(94, 23);
-            this.btnAddWithID.TabIndex = 0;
-            this.btnAddWithID.Text = "Add With ID";
-            this.btnAddWithID.UseVisualStyleBackColor = true;
-            this.btnAddWithID.Click += new System.EventHandler(this.btnAddWithID_Click);
+            this.btnAddWithNoID.Location = new System.Drawing.Point(145, 34);
+            this.btnAddWithNoID.Name = "btnAddWithNoID";
+            this.btnAddWithNoID.Size = new System.Drawing.Size(94, 23);
+            this.btnAddWithNoID.TabIndex = 2;
+            this.btnAddWithNoID.Text = "Add With No ID";
+            this.btnAddWithNoID.UseVisualStyleBackColor = true;
+            this.btnAddWithNoID.Click += new System.EventHandler(this.btnAddWithNoID_Click);
             // 
             // btnUpdate
             // 
@@ -218,15 +220,15 @@
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // btnAddWithNoID
+            // btnAddWithID
             // 
-            this.btnAddWithNoID.Location = new System.Drawing.Point(145, 34);
-            this.btnAddWithNoID.Name = "btnAddWithNoID";
-            this.btnAddWithNoID.Size = new System.Drawing.Size(94, 23);
-            this.btnAddWithNoID.TabIndex = 2;
-            this.btnAddWithNoID.Text = "Add With No ID";
-            this.btnAddWithNoID.UseVisualStyleBackColor = true;
-            this.btnAddWithNoID.Click += new System.EventHandler(this.btnAddWithNoID_Click);
+            this.btnAddWithID.Location = new System.Drawing.Point(9, 34);
+            this.btnAddWithID.Name = "btnAddWithID";
+            this.btnAddWithID.Size = new System.Drawing.Size(94, 23);
+            this.btnAddWithID.TabIndex = 0;
+            this.btnAddWithID.Text = "Add With ID";
+            this.btnAddWithID.UseVisualStyleBackColor = true;
+            this.btnAddWithID.Click += new System.EventHandler(this.btnAddWithID_Click);
             // 
             // gbBulk
             // 
@@ -239,6 +241,16 @@
             this.gbBulk.TabStop = false;
             this.gbBulk.Text = "Bulk API";
             // 
+            // btnMultiIndex
+            // 
+            this.btnMultiIndex.Location = new System.Drawing.Point(122, 34);
+            this.btnMultiIndex.Name = "btnMultiIndex";
+            this.btnMultiIndex.Size = new System.Drawing.Size(95, 23);
+            this.btnMultiIndex.TabIndex = 1;
+            this.btnMultiIndex.Text = "Multiple Index";
+            this.btnMultiIndex.UseVisualStyleBackColor = true;
+            this.btnMultiIndex.Click += new System.EventHandler(this.btnMultiIndex_Click);
+            // 
             // btnSingleIndex
             // 
             this.btnSingleIndex.Location = new System.Drawing.Point(9, 34);
@@ -249,15 +261,15 @@
             this.btnSingleIndex.UseVisualStyleBackColor = true;
             this.btnSingleIndex.Click += new System.EventHandler(this.btnSingleIndex_Click);
             // 
-            // btnMultiIndex
+            // brnDelete
             // 
-            this.btnMultiIndex.Location = new System.Drawing.Point(122, 34);
-            this.btnMultiIndex.Name = "btnMultiIndex";
-            this.btnMultiIndex.Size = new System.Drawing.Size(95, 23);
-            this.btnMultiIndex.TabIndex = 1;
-            this.btnMultiIndex.Text = "Multiple Index";
-            this.btnMultiIndex.UseVisualStyleBackColor = true;
-            this.btnMultiIndex.Click += new System.EventHandler(this.btnMultiIndex_Click);
+            this.brnDelete.Location = new System.Drawing.Point(9, 121);
+            this.brnDelete.Name = "brnDelete";
+            this.brnDelete.Size = new System.Drawing.Size(94, 23);
+            this.brnDelete.TabIndex = 3;
+            this.brnDelete.Text = "Delete";
+            this.brnDelete.UseVisualStyleBackColor = true;
+            this.brnDelete.Click += new System.EventHandler(this.brnDelete_Click);
             // 
             // MainForm
             // 
@@ -308,6 +320,7 @@
         private System.Windows.Forms.GroupBox gbBulk;
         private System.Windows.Forms.Button btnSingleIndex;
         private System.Windows.Forms.Button btnMultiIndex;
+        private System.Windows.Forms.Button brnDelete;
     }
 }
 

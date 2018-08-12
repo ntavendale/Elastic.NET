@@ -94,6 +94,21 @@ namespace endpoint
                 }
             }
         }
+        public async Task<string> Delete()
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                using (HttpResponseMessage response = await client.DeleteAsync(this.FullURL).ConfigureAwait(continueOnCapturedContext: false))
+                {
+                    using (HttpContent content = response.Content)
+                    {
+                        // ... Read the string.
+                        string result = await content.ReadAsStringAsync();
+                        return result;
+                    }
+                }
+            }
+        }
     }
 
 }

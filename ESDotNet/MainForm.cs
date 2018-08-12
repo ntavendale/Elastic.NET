@@ -158,5 +158,12 @@ namespace ESDotNet
             var res = client.PostAsync(json.ToString()).Result;
             tbOutput.Text = tbOutput.Text + string.Format("POST {0} at {1} Result = {2}", json, client.FullURL, res) + Environment.NewLine;
         }
+
+        private void brnDelete_Click(object sender, EventArgs e)
+        {
+            var client = new EndpointClient("http://127.0.0.1", string.Empty, string.Empty, "2018-07-01/message/DocID01", 9200);
+            var res = client.Delete(); //Put when we have ID
+            tbOutput.Text = tbOutput.Text + string.Format("DELETE {0} Result = {1}", client.FullURL, res) + Environment.NewLine;
+        }
     }
 }
